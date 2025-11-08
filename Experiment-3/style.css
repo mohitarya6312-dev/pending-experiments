@@ -1,0 +1,45 @@
+:root{
+    --bg-color-header: #4CAF50;
+    --bg-color-nav: #efefef;
+    --bg-color-main: #ffffff;
+    --bg-color-footer: #4CAF50;
+    --text--colour: #000000;
+}
+.dashboard{
+    display: grid;
+    grid-template-columns: 400px auto;
+    grid-template-rows: 100px auto 50px;
+    height: 100vh;
+    border: 3.5px solid #000000;
+}
+header{
+    background-color:var(--bg-color-header);
+    grid-column: 1 /span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: var(--text-colour);
+    
+}
+nav{
+    background-color: var(--bg-color-nav);
+}
+main{
+    background-color: var(--bg-color-main);
+    color: var(--text-colour);
+}
+footer{
+    background-color: var(--bg-color-footer);
+    grid-column: 1 /span 2;
+}
+#dark-mode-toggle{
+    display: none;
+}
+input:checked ~ .dashboard{
+   --bg-color-header: #333;
+   --bg-color-nav: #7f7c7c;
+   --bg-color-main: #c7bcbc;
+   --bg-color-footer: #333;
+   --text-colour: #ffffff;
+}
